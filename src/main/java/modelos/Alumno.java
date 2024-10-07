@@ -4,7 +4,7 @@ import utilidades.Utilidad;
 
 import java.util.List;
 
-public class Alumno {
+public class Alumno{
     protected String rut, nombre, apellido, direccion;
     protected List<Materia> materiaList;
 

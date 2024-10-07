@@ -44,7 +44,7 @@ public class Materia {
     }
     public void setNotasList() {
         notasList = new ArrayList<>();
-        estara bien?
+//        estara bien?
     }
 
 }

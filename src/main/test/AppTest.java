@@ -1,4 +1,3 @@
-package $com.proyectoFit.backend.apirest;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
