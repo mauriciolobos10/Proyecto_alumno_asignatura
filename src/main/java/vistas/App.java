@@ -2,7 +2,9 @@ package vistas;
 
 public class App
 {
+    private static Menu menu;
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        menu = new Menu();
+        menu.iniciarMenu();
     }
 }

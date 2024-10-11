@@ -12,6 +12,9 @@ public class Materia {
     public Materia() {
         setNombre();
     }
+    public Materia(MateriaEnum nombre) {
+        this.nombre = nombre;
+    }
 
     public MateriaEnum getNombre() {
         return nombre;

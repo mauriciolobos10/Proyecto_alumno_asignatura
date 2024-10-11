@@ -3,6 +3,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import org.mockito.Mock;
 /**
  * Unit test for simple App.
  */

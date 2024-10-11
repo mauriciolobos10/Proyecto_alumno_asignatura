@@ -14,6 +14,10 @@ public class Alumno{
         setApellido();
         setDireccion();
     }
+    public Alumno(String rut, String nombre) {
+        this.rut = rut;
+        this.nombre = nombre;
+    }
 
     public String getRut() {
         return rut;
