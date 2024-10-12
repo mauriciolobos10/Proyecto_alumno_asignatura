@@ -9,6 +9,7 @@ public class Alumno{
     protected List<Materia> materiaList;
 
     public Alumno() {
+        Utilidad.mostrarMensajes("--- Crear Alumno ---");
         setRut();
         setNombre();
         setApellido();
@@ -24,7 +25,7 @@ public class Alumno{
     }
 
     public void setRut() {
-        Utilidad.mostrarMensajes("Ingresa el RUT del alumno");
+        Utilidad.mostrarMensajes("Ingresa RUT: ");
         this.rut = Utilidad.lectura.nextLine();
     }
 
@@ -33,7 +34,7 @@ public class Alumno{
     }
 
     public void setNombre() {
-        Utilidad.mostrarMensajes("Ingresa el Nombre del alumno");
+        Utilidad.mostrarMensajes("Ingresa nombre: ");
         this.nombre = Utilidad.lectura.nextLine();
     }
 
@@ -42,7 +43,7 @@ public class Alumno{
     }
 
     public void setApellido() {
-        Utilidad.mostrarMensajes("Ingresa el Apellido del alumno");
+        Utilidad.mostrarMensajes("Ingresa apellido: ");
         this.apellido = Utilidad.lectura.nextLine();
     }
 
@@ -51,7 +52,7 @@ public class Alumno{
     }
 
     public void setDireccion() {
-        Utilidad.mostrarMensajes("Ingresa la direccion del alumno");
+        Utilidad.mostrarMensajes("Ingresa dirección: ");
         this.direccion = Utilidad.lectura.nextLine();
     }
 

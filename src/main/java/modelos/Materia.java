@@ -21,7 +21,7 @@ public class Materia {
     }
 
     public void setNombre() {
-        Utilidad.mostrarMensajes("Seleccione el nombre de la materia: ");
+        Utilidad.mostrarMensajes("Selecciona una Materia: ");
         int opcion = 1;
         for (MateriaEnum materia : MateriaEnum.values()) {
             Utilidad.mostrarMensajes("Opcion "+opcion+ ":" + materia.name());
@@ -34,7 +34,7 @@ public class Materia {
 
             if (op > 0 && op <= MateriaEnum.values().length) {
                 this.nombre = MateriaEnum.values()[op - 1];  // Asignar el enum correspondiente
-                Utilidad.mostrarMensajes("Materia seleccionada: " + this.nombre.name());
+//                Utilidad.mostrarMensajes("Materia seleccionada: " + this.nombre.name());
             } else {
                 Utilidad.mostrarMensajes("Opción no válida. Seleccione un número entre 1 y " + MateriaEnum.values().length);
             }
@@ -45,9 +45,8 @@ public class Materia {
     public List<Double> getNotasList() {
         return notasList;
     }
-    public void setNotasList() {
-        notasList = new ArrayList<>();
-//        estara bien?
-    }
 
+    public void setNotasList(List<Double> notasList) {
+        this.notasList = notasList;
+    }
 }

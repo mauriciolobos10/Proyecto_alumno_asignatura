@@ -29,8 +29,8 @@ public class Menu extends MenuTemplate{
     }
 
     @Override
-    public void listarAlummnos() {
-
+    public void listarAlumnos() {
+        alumnoServicio.listarAlumnos();
     }
 
     @Override

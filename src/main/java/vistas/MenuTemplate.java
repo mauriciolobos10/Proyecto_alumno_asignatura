@@ -11,7 +11,7 @@ public abstract class MenuTemplate {
     public abstract void crearAlummno();
     public abstract void agregarMateria();
     public abstract void agregarNotaPasoUno();
-    public abstract void listarAlummnos() ;
+    public abstract void listarAlumnos() ;
     public abstract void terminarPrograma();
 
     public final void iniciarMenu(){
@@ -33,7 +33,7 @@ public abstract class MenuTemplate {
                     crearAlummno();
                     break;
                 case 2:
-                    listarAlummnos();
+                    listarAlumnos();
                     break;
                 case 3:
                     agregarMateria();
