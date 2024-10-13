@@ -18,10 +18,17 @@ public class Utilidad {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println();
     }
 
     public static void mostrarMensajes(String mensaje){
         System.out.println(mensaje);
+    }
+    public static void mostrarMensajesTitulos(String mensaje){
+        Utilidad.mostrarMensajes("--- " + mensaje + " ---");
+    }
+
+    public static void continuedadMenu(){
+        Utilidad.mostrarMensajes("Presiona cualquier tecla para continuar...");
+        lectura.nextLine();
     }
 }

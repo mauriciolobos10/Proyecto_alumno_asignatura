@@ -11,6 +11,7 @@ public class Materia {
 
     public Materia() {
         setNombre();
+        notasList = new ArrayList<>();
     }
     public Materia(MateriaEnum nombre) {
         this.nombre = nombre;
@@ -32,13 +33,17 @@ public class Materia {
         do {
             op = Utilidad.lectura.nextInt();
 
+            if(op == 9){
+                return;
+            }
+
             if (op > 0 && op <= MateriaEnum.values().length) {
                 this.nombre = MateriaEnum.values()[op - 1];  // Asignar el enum correspondiente
 //                Utilidad.mostrarMensajes("Materia seleccionada: " + this.nombre.name());
             } else {
                 Utilidad.mostrarMensajes("Opción no válida. Seleccione un número entre 1 y " + MateriaEnum.values().length);
             }
-        }while (op != 9 || this.nombre != null);
+        }while (this.nombre == null);
 
     }
 
