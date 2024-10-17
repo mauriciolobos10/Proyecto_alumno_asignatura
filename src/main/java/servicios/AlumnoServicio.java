@@ -20,13 +20,8 @@ import utilidades.Utilidad;
 
 public class AlumnoServicio {
     private Map<String, Alumno> listaAlumnos;
-    private AlumnoServicioImp alumnoServicio;
 
-    @Mock
-    private AlumnoServicioImp alumnoServicioMock;
-    private Materia matematicas;
-    private Materia lenguaje;
-    private Alumno mapu;
+
 
     public void crearAlumno(Alumno alumno){
         if(listaAlumnos == null){
@@ -135,32 +130,4 @@ public class AlumnoServicio {
         }while (op != 9);
     }
 
-    @BeforeEach
-    void setUp() {
-        // Inicializar los mocks
-        MockitoAnnotations.openMocks(this);
-
-        // Crear las instancias de datos de prueba
-        mapu = new Alumno("15", "Mapu");
-        matematicas = new Materia(MateriaEnum.MATEMATICA);
-        lenguaje = new Materia(MateriaEnum.LENGUAJE);
-    }
-    @Test
-    void crearAlumnoTest() {
-        // Llamar al método real
-//        crearAlumno(mapu);
-
-    }
-    @Test
-    void agregarMateriaTest() {
-
-    }
-    @Test
-    void materiasPorAlumnosTest() {
-
-    }
-    @Test
-    void listarAlumnosTest() {
-
-    }
 }

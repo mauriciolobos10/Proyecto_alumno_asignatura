@@ -1,5 +1,5 @@
 package servicios;
 
-public class AlumnoServicioImp {
+public class AlumnoServicioImp extends AlumnoServicio {
 
 }

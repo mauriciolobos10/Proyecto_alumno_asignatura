@@ -2,12 +2,14 @@
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import utilidades.Utilidad;
+
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppTest
     extends TestCase
 {
     /**
