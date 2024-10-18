@@ -2,10 +2,11 @@ package modelos;
 
 import utilidades.Utilidad;
 
+import javax.swing.plaf.UIResource;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Materia {
+public class Materia implements Utilidad {
     private MateriaEnum nombre;
     private List<Double> notasList;
 
@@ -31,7 +32,7 @@ public class Materia {
         Utilidad.mostrarMensajes("Salir: 9.");
         int op;
         do {
-            op = Utilidad.lectura.nextInt();
+            op = lectura.nextInt();
 
             if(op == 9){
                 return;

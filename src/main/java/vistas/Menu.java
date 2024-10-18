@@ -21,7 +21,7 @@ public class Menu extends MenuTemplate{
         Utilidad.mostrarMensajesTitulos("Exportar Datos");
         if(alumnoServicio.listaDeAlumnos() == null){
             Utilidad.mostrarMensajes("Sin datos que exportar");
-            Utilidad.continuedadMenu();
+            Utilidad.presioneTeclaParaContinuar();
             return;
         }
         Utilidad.mostrarMensajes("Ingresa la ruta en donde se encuentra el archivo notas.csv : ");
@@ -32,11 +32,6 @@ public class Menu extends MenuTemplate{
     @Override
     public void crearAlummno() {
         Alumno alumno = new Alumno();
-        Utilidad.mostrarMensajesTitulos("Crear Alumno");
-        alumno.setRut();
-        alumno.setNombre();
-        alumno.setApellido();
-        alumno.setDireccion();
         alumno.setMateriaList(new ArrayList<>());
         alumnoServicio.crearAlumno(alumno);
         Utilidad.mostrarMensajesTitulos("¡Alumno agregado!");
@@ -63,8 +58,10 @@ public class Menu extends MenuTemplate{
 
                 if (!existe) {
                     // Si no existe, la agregamos
-                    alumno.getMateriaList().add(nuevaMateria);
+                    alumnoServicio.agregarMateria(alumno.getRut(), nuevaMateria);
+//                    alumno.getMateriaList().add(nuevaMateria);
                     Utilidad.mostrarMensajes("Materia agregada correctamente.");
+                    Utilidad.mostrarMensajesTitulos("¡Materia agregada!");
                     return;
                 } else {
                     // Si ya existe, mostramos un mensaje

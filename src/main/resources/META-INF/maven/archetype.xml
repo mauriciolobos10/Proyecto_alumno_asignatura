@@ -4,6 +4,7 @@
     <source>src/main/java/App.java</source>
   </sources>
   <testSources>
-    <source>src/test/java/AppTest.java</source>
+    <source>src/test/java/AlumnoServicioTest.java</source>
+    <source>src/test/java/PromedioServicioTest.java</source>
   </testSources>
 </archetype>

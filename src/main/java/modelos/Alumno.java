@@ -4,7 +4,7 @@ import utilidades.Utilidad;
 
 import java.util.List;
 
-public class Alumno{
+public class Alumno implements Utilidad{
     protected String rut, nombre, apellido, direccion;
     protected List<Materia> materiaList;
 
@@ -26,7 +26,7 @@ public class Alumno{
 
     public void setRut() {
         Utilidad.mostrarMensajes("Ingresa RUT: ");
-        this.rut = Utilidad.lectura.nextLine();
+        this.rut = lectura.nextLine();
     }
 
     public String getNombre() {
@@ -35,7 +35,7 @@ public class Alumno{
 
     public void setNombre() {
         Utilidad.mostrarMensajes("Ingresa nombre: ");
-        this.nombre = Utilidad.lectura.nextLine();
+        this.nombre = lectura.nextLine();
     }
 
     public String getApellido() {
@@ -44,7 +44,7 @@ public class Alumno{
 
     public void setApellido() {
         Utilidad.mostrarMensajes("Ingresa apellido: ");
-        this.apellido = Utilidad.lectura.nextLine();
+        this.apellido = lectura.nextLine();
     }
 
     public String getDireccion() {
@@ -53,7 +53,7 @@ public class Alumno{
 
     public void setDireccion() {
         Utilidad.mostrarMensajes("Ingresa dirección: ");
-        this.direccion = Utilidad.lectura.nextLine();
+        this.direccion = lectura.nextLine();
     }
 
     public List<Materia> getMateriaList() {

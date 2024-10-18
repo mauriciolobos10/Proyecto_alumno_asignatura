@@ -2,10 +2,8 @@ package vistas;
 
 import utilidades.Utilidad;
 
-import java.util.Scanner;
-
-public abstract class MenuTemplate {
-    public final Scanner lectura = new Scanner(System.in);
+public abstract class MenuTemplate implements Utilidad{
+//    public final Scanner lectura = new Scanner(System.in);
 
     public abstract void exportarDatos();
     public abstract void crearAlummno();
@@ -17,7 +15,7 @@ public abstract class MenuTemplate {
     public final void iniciarMenu(){
         Integer op = 0;
         do {
-            Utilidad.limpiarPantalla();
+//            Utilidad.limpiarPantalla();
             System.out.println("MENU PRINCIPAL");
             System.out.println("1. Crear Alumnos\n" +
                     "2. Listar Alumnos\n" +
@@ -28,6 +26,7 @@ public abstract class MenuTemplate {
             System.out.print("Selección: ");
             op = lectura.nextInt();
             lectura.nextLine();
+            Utilidad.limpiarPantalla();
             switch (op) {
                 case 1:
                     crearAlummno();
@@ -51,6 +50,9 @@ public abstract class MenuTemplate {
                     System.out.println("Opci�n inv�lida, saliendo de la aplicaci�n.");
                     break;
             }
+
+            Utilidad.presioneTeclaParaContinuar();
+            Utilidad.limpiarPantalla();
         }while (op != 5);
 
     }

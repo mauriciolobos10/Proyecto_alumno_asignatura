@@ -2,7 +2,7 @@ package utilidades;
 
 import java.util.Scanner;
 
-public class Utilidad {
+public interface Utilidad {
 
     public static final Scanner lectura = new Scanner(System.in);
     public static void limpiarPantalla(){
@@ -27,8 +27,9 @@ public class Utilidad {
         Utilidad.mostrarMensajes("--- " + mensaje + " ---");
     }
 
-    public static void continuedadMenu(){
-        Utilidad.mostrarMensajes("Presiona cualquier tecla para continuar...");
+    public static void presioneTeclaParaContinuar(){
+        Utilidad.mostrarMensajes("Ingrese cualquier tecla para continuar...");
+        lectura.nextInt();
         lectura.nextLine();
     }
 }

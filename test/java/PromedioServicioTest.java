@@ -10,19 +10,18 @@ public class PromedioServicioTest {
 
     @Test
     public void calcularPromedioTest() {
-        // Crear una instancia real de la clase PromedioServicioImp
         PromedioServicioImp promedioserv = new PromedioServicioImp();
 
-        // Datos de prueba
+        //agrega valores para sumar
         List<Double> valores = new ArrayList<>();
         valores.add(2.0);
         valores.add(4.0);
         valores.add(6.0);
 
-        // Llamada al método real y verificación
+        //llama al metodo y almacena valor
         double resultado = promedioserv.calcularPromedio(valores);
 
-        // Validación del resultado
+        //valida resultado
         assertEquals(4.0, resultado, 0.001);
     }
 
